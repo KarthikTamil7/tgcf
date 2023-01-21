@@ -74,25 +74,25 @@ class LoginConfig(BaseModel):
 class BotMessages(BaseModel):
     start: str = """**Hi 👋🏻 Bro,
 
-    I'm UK Studios Official a Bot to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
+I'm UK Studios Official a Bot to Maintain Your Channels. I am very useful for the Channel Admin who have many Channels.
 
-    See help for more Details.
+See help for more Details.
 
-    Maintained By : [Karthik](https://t.me/HMTD_Karthik)**"""
+Maintained By : [Karthik](https://t.me/HMTD_Karthik)**"""
     bot_help: str = """**The Ultimate Tool to Automate Custom Telegram Message Forwarding. Live Syncer, Auto Poster, Backup Bot, Cloner, Chat Forwarder, Duplicator, ... Call it whatever you like! tgcf can fulfill Your Custom Needs.**"""
     bot_about: str = """**🤖 My Name : [UK Auto Forward Bot](https://t.me/UK_Auto_Forward_Bot)
 
-    🧑🏻‍💻 Developer : [Karthik](https://t.me/HMTD_Karthik)
+🧑🏻‍💻 Developer : [Karthik](https://t.me/HMTD_Karthik)
 
-    📝 Language : Pyrogram
+📝 Language : Pyrogram
 
-    📚 Framework : Python3
+📚 Framework : Python3
 
-    📡 Hosted on : VPS
+📡 Hosted on : VPS
 
-    📢 Updates Channel : [UK Movies Zone (Updates)](https://t.me/UK_Movies_Zone_Updates)
+📢 Updates Channel : [UK Movies Zone (Updates)](https://t.me/UK_Movies_Zone_Updates)
 
-    🌐 Website : [www.HMTDMovies.tk](https://www.HMTDMovies.tk)**"""
+🌐 Website : [www.HMTDMovies.tk](https://www.HMTDMovies.tk)**"""
 
 class Config(BaseModel):
     """The blueprint for tgcf's whole config."""
