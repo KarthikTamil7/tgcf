@@ -79,7 +79,7 @@ class BotMessages(BaseModel):
     See help for more Details.
 
     Maintained By : [Karthik](https://t.me/HMTD_Karthik)**"""
-    bot_help: str = """"**The Ultimate Tool to Automate Custom Telegram Message Forwarding. Live Syncer, Auto Poster, Backup Bot, Cloner, Chat Forwarder, Duplicator, ... Call it whatever you like! tgcf can fulfill Your Custom Needs.**"""
+    bot_help: str = """**The Ultimate Tool to Automate Custom Telegram Message Forwarding. Live Syncer, Auto Poster, Backup Bot, Cloner, Chat Forwarder, Duplicator, ... Call it whatever you like! tgcf can fulfill Your Custom Needs.**"""
     bot_about: str = """**🤖 My Name : [UK Auto Forward Bot](https://t.me/UK_Auto_Forward_Bot)
 
     🧑🏻‍💻 Developer : [Karthik](https://t.me/HMTD_Karthik)
