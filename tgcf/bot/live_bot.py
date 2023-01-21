@@ -16,7 +16,6 @@ from tgcf.bot.utils import (
 from tgcf.config import CONFIG, write_config
 from tgcf.plugin_models import Style
 
-
 @admin_protect
 async def forward_command_handler(event):
     """Handle the `/forward` command."""
@@ -133,6 +132,7 @@ async def help_command_handler(event):
     """Handle the /help command."""
     await event.respond(CONFIG.bot_messages.bot_help)
 
+    disable_web_page_preview=True,
 
 def get_events():
     _ = get_command_prefix()
