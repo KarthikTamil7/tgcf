@@ -54,6 +54,9 @@ if check_password(st):
                 CONFIG.bot_messages.bot_help = st.text_area(
                     "Bot's Reply to /help command", value=CONFIG.bot_messages.bot_help
                 )
+                CONFIG.bot_messages.bot_about = st.text_area(
+                    "Bot's Reply to /about command", value=CONFIG.bot_messages.bot_about
+                )
 
             if st.button("Save"):
                 write_config(CONFIG)
