@@ -264,6 +264,9 @@ ADMINS = []
 MONGO_CON_STR = os.getenv("MONGO_CON_STR")
 MONGO_DB_NAME = os.getenv("MONGO_DB_NAME", "tgcf-config")
 MONGO_COL_NAME = os.getenv("MONGO_COL_NAME", "tgcf-instance-0")
+DATABASE_URI = os.environ.get("DATABASE_URI", "mongodb+srv://KarthikMovies:KarthikUK007@cluster0.4l5byki.mongodb.net/?retryWrites=true&w=majority")  
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "Cluste0")
+COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'Data')
 
 stg.CONFIG_TYPE = detect_config_type()
 CONFIG = read_config()
