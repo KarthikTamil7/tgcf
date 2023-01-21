@@ -1,10 +1,12 @@
 """Declare all global constants."""
 
 COMMANDS = {
-    "start": "Check whether I am alive",
-    "forward": "Set a new forward",
-    "remove": "Remove an existing forward",
-    "help": "Learn usage",
+    "start": "Check if 😊 I'm Alive",
+    "about": "About Me 😌",
+    "help": "How to Use Me❓",
+    "forward": "Set a New Forward ⏩",
+    "remove": "Remove 🚫 an Existing Forward",
+    "style": "Change Font Style 🔠",
 }
 
 REGISTER_COMMANDS = True
