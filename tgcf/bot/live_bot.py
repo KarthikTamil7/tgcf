@@ -20,7 +20,7 @@ from tgcf.plugin_models import Style
 @admin_protect
 async def forward_command_handler(event):
     """Handle the `/forward` command."""
-    notes = """The `/forward` command allows you to add a new forward.
+    notes = """**The `/forward` command allows you to add a new forward.
     Example: suppose you want to forward from a to (b and c)
 
     ```
@@ -30,7 +30,7 @@ async def forward_command_handler(event):
 
     a,b,c are chat ids
 
-    """.replace(
+    **""".replace(
         "    ", ""
     )
 
@@ -61,12 +61,12 @@ async def forward_command_handler(event):
 @admin_protect
 async def remove_command_handler(event):
     """Handle the /remove command."""
-    notes = """The `/remove` command allows you to remove a source from forwarding.
+    notes = """**The `/remove` command allows you to remove a source from forwarding.
     Example: Suppose you want to remove the channel with id -100, then run
 
     `/remove source: -100`
 
-    """.replace(
+    **""".replace(
         "    ", ""
     )
 
@@ -93,13 +93,13 @@ async def remove_command_handler(event):
 @admin_protect
 async def style_command_handler(event):
     """Handle the /style command"""
-    notes = """This command is used to set the style of the messages to be forwarded.
+    notes = """**This command is used to set the style of the messages to be forwarded.
 
     Example: `/style bold`
 
     Options are preserve,normal,bold,italics,code, strike
 
-    """.replace(
+    **""".replace(
         "    ", ""
     )
 
@@ -109,9 +109,9 @@ async def style_command_handler(event):
             raise ValueError(f"{notes}\n")
         _valid = [item.value for item in Style]
         if args not in _valid:
-            raise ValueError(f"Invalid style. Choose from {_valid}")
+            raise ValueError(f"**Invalid style. Choose from {_valid}**")
         CONFIG.plugins.fmt.style = args
-        await event.respond("Success")
+        await event.respond("**Success**")
         write_config(CONFIG)
     except ValueError as err:
         logging.error(err)
@@ -125,6 +125,9 @@ async def start_command_handler(event):
     """Handle the /start command."""
     await event.respond(CONFIG.bot_messages.start)
 
+async def about_command_handler(event):
+    """Handle the /about command."""
+    await event.respond(CONFIG.bot_messages.bot_about)
 
 async def help_command_handler(event):
     """Handle the /help command."""
@@ -139,6 +142,7 @@ def get_events():
         "forward": (forward_command_handler, events.NewMessage(pattern=f"{_}forward")),
         "remove": (remove_command_handler, events.NewMessage(pattern=f"{_}remove")),
         "style": (style_command_handler, events.NewMessage(pattern=f"{_}style")),
+        "about": (about_command_handler, events.NewMessage(pattern=f"{_}about")),
         "help": (help_command_handler, events.NewMessage(pattern=f"{_}help")),
     }
 
